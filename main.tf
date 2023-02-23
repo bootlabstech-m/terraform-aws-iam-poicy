@@ -13,6 +13,6 @@ resource "aws_iam_policy" "iam_policy" {
 }
 resource "aws_iam_policy_attachment" "attachment" {
   name       =   var.policy_attachment_name
-  roles       = [aws_iam_role.iam_role.name]
+  roles       = var.iam_roles
   policy_arn = aws_iam_policy.iam_policy.arn  
 }

@@ -26,5 +26,9 @@ variable "policy_attachment_name" {
   type        = string
   description = "policy_attachment_name."
 }
+variable "iam_roles" {
+  type        = list(string)
+  description = "policy_attachment_name."
+}
 
 
