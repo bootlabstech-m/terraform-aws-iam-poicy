@@ -11,7 +11,7 @@ variable "policy_name" {
   description = "policy_name"
 }
 variable "policy_action" {
-  type        = string
+  type        = list(string)
   description = "role_name"
 }
 variable "policy_effect" {
@@ -19,8 +19,8 @@ variable "policy_effect" {
   description = "service to which role will be given."
 }
 variable "policy_resource" {
-  type        = string
-  description = "profile_name"
+  type        = list(string)
+  description = "policy resource"
 }
 variable "policy_attachment_name" {
   type        = string
