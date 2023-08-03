@@ -10,6 +10,9 @@ resource "aws_iam_policy" "iam_policy" {
       },
     ]
   })
+    lifecycle {
+    ignore_changes = [tags]
+  }
 }
 resource "aws_iam_policy_attachment" "attachment" {
   name       =   var.policy_attachment_name
